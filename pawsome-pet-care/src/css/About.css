@@ -1,0 +1,123 @@
+/* Color variables */
+:root {
+    --color-black: black;
+    --color-white: white;
+    --color-dark-blue: #1e3a8a;
+    --color-light-blue: #93c5fd;
+    --color-gray: #374151;
+    --color-light-gray: #d1d5db;
+    --color-light-grayish-blue: #f0f4f8;
+    --color-dark-gray: #374151;
+    --color-green: #a9f1f4;
+    --color-ivory: #FFFFF0;
+    --color-opaque: rgba(128, 128, 128, );
+}
+
+
+#about-content {
+    padding: 10px;
+    background-color: var(--color-white);
+}
+
+#about-content h3 {
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--color-white);
+}
+
+#about-text {
+    padding-right: 20px;
+}
+
+#reviews-contact{
+    background-color: var(--color-white);
+}
+
+/* Reviews section */
+#reviews {
+    background-color: var(--color-light-grayish-blue);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#contact-me{
+    background-color: var(--color-light-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#contact-me p, #contact-me h2{
+    color: var(--color-black);
+}
+
+#contact-me p{
+    padding: 20px 0px;
+}
+
+#submit{
+    transform: translate(-50%, -50%); 
+    margin-left: 50%;
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #email{
+    margin: 0 35px;
+  }
+
+  #message{
+    margin: 0 13px;
+  }
+
+/* Contact section */
+#contact {
+    padding: 20px;
+    background-color: var(--color-light-gray);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#contact section {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+#contact h4 {
+    color: var(--color-dark-blue);
+    font-weight: bold;
+}
+
+#face-img {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+    @media only screen and (max-width: 768px) {
+        /*About section*/
+
+        .about-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        #group{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
