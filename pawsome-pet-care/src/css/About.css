@@ -17,6 +17,8 @@
 #about-content {
     padding: 10px;
     background-color: var(--color-white);
+    margin: 0; 
+    padding: 0;
 }
 
 #about-content h3 {

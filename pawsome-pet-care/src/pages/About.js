@@ -1,5 +1,5 @@
 import "../css/About.css";
-import ProfileImage from "../components/ProfileImage";
+import Facecard from "../images/About/my-face.png"
 
 const About = () => {
     return (
@@ -17,7 +17,7 @@ const About = () => {
                     </p>
                 </div>
                 <div id="face">
-                <ProfileImage image="/images/about/my-face.png" />
+                <img id="face-img" src={Facecard} alt="My face"/>
                 </div>
             </div>
 

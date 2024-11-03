@@ -1,4 +1,111 @@
-header {
-    background:skyblue;
-    border:2px solid purple;
+/* Color variables */
+:root {
+    --color-black: black;
+    --color-white: white;
+    --color-dark-blue: #1e3a8a;
+    --color-light-blue: #93c5fd;
+    --color-gray: #374151;
+    --color-light-gray: #d1d5db;
+    --color-light-grayish-blue: #f0f4f8;
+    --color-dark-gray: #374151;
+    --color-green: #a9f1f4;
+    --color-ivory: #FFFFF0;
+    --color-opaque: rgba(128, 128, 128, );
 }
+
+
+
+/* Body styling */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+/* Header styling */
+#main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    padding: 0;
+    height: 50px;
+}
+
+#home-login-nav{
+    margin-left: 30px;
+}
+
+#home-login-nav ul {
+    display: flex; /* Horizontal layout */
+    align-items: center;
+    list-style-type: none; 
+}
+
+#home-login-nav li {
+    margin-right: 20px; /* Space between items */
+}
+
+#logo {
+    width: 35px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#home-login-nav h1 {
+    color: var(--color-black); 
+    font-size: 2em;
+}
+
+
+/* Main navigation menu */
+#home-main-nav {
+    width: 100%;
+    background-color: white; /* Changed background to white */
+    position: relative;
+}
+
+/* Toggle icon for small screens */
+#toggle-nav {
+    display: none;
+    cursor: pointer;
+}
+
+#toggle-nav div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-light-gray);
+    margin: 5px 0;
+}
+
+/* Navigation items */
+#nav-items {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    margin: 0;
+    width: 100%;
+}
+
+#nav-items li {
+    list-style: none;
+    margin: 0px 20px;
+}
+
+#nav-items a {
+    text-decoration: none;
+    padding: 10px 0;
+    background: var(--color-white);
+    color: var(--color-black);
+    text-align: center;
+    display: block;
+    font-size: 0.8em;
+}
+
+@media only screen and (min-width: 769px) { /* Adjust max-width as needed for your mobile breakpoint */
+    #nav-items a:hover {
+        border-bottom: 2px solid black; 
+        padding-bottom: 8px;
+    }
+  }
+

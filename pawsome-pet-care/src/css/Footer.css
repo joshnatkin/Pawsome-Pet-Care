@@ -1,0 +1,44 @@
+/* Color variables */
+:root {
+    --color-black: black;
+    --color-white: white;
+    --color-dark-blue: #1e3a8a;
+    --color-light-blue: #93c5fd;
+    --color-gray: #374151;
+    --color-light-gray: #d1d5db;
+    --color-light-grayish-blue: #f0f4f8;
+    --color-dark-gray: #374151;
+    --color-green: #a9f1f4;
+    --color-ivory: #FFFFF0;
+    --color-opaque: rgba(128, 128, 128, );
+}
+
+/* Footer styling */
+#main-footer {
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#main-footer p {
+    text-align: left;
+    margin-left: 2%;
+}
+
+#footer-img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    position: absolute;
+    right: 2%;
+    bottom: 15%;
+}
+
+#footer-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 10%;
+}

@@ -1,0 +1,177 @@
+/* Color variables */
+:root {
+    --color-black: black;
+    --color-white: white;
+    --color-dark-blue: #1e3a8a;
+    --color-light-blue: #93c5fd;
+    --color-gray: #374151;
+    --color-light-gray: #d1d5db;
+    --color-light-grayish-blue: #f0f4f8;
+    --color-dark-gray: #374151;
+    --color-green: #a9f1f4;
+    --color-ivory: #FFFFF0;
+    --color-opaque: rgba(128, 128, 128, );
+}
+
+
+
+/* Body styling */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+/* Adopt section */
+#adopt-content {
+    padding: 20px;
+    background-color: var(--color-white);
+}
+
+#adopt-top {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+#adopt-filters {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+#adopt-filters section {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+}
+
+
+#dog-search, #sort-options {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid var(--color-gray);
+    border-radius: 5px;
+    background-color: var(--color-white);
+    transition: border-color 0.3s;
+}
+
+#adopt-filters button {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#dog-search input{
+    width: 200px;
+    padding: 10px;
+}
+#animals {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1px;
+    box-sizing: border-box;
+    background-color: var(--color-white);
+}
+
+.dog-container { 
+    width: 200px; 
+    height: auto; 
+    padding: 10px;
+    margin: 20px 20px; 
+    background-color: var(--color-light-grayish-blue);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.dog-h4 {
+    font-size: 1.5em;
+    margin: 1px;
+}
+
+.dog-p {
+    font-size: 1rem;
+    margin: 2px 0; /* Minimal space between paragraphs */
+}
+
+.dog-img {
+    width: 100%; 
+    height: 200px; 
+    margin-bottom: 10px;
+    border-radius: 4px;
+    object-fit: cover; 
+}
+
+/*dog-expanded section*/
+
+#dog-expanded-section {
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 500px;
+    height: auto; /* Set height to auto for content fit */
+    max-height: 80%; /* Max height to avoid overflow */
+    background-color: var(--color-light-grayish-blue);
+    color: black;
+    padding: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for popup effect */
+    overflow-y: auto; 
+}
+
+#dog-expanded-section img {
+    padding-top: 20px;
+    width: 70%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: black;
+}
+
+
+#adopt-search {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#google{
+    margin-top: 5%;
+    width: 100%;
+}
+
+#google-maps{
+    width: 70%;
+}
