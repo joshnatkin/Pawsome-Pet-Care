@@ -10,9 +10,9 @@ import Adopt from "./pages/Adopt";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const App = () => {
+export default function App () {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={(<Layout />)}>
           <Route index element={(<Home />)} />
