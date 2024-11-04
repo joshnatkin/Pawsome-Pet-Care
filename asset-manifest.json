@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Pawsome-Pet-Care/static/css/main.e6e94f81.css",
+    "main.css": "/Pawsome-Pet-Care/static/css/main.36459c80.css",
     "main.js": "/Pawsome-Pet-Care/static/js/main.8849368f.js",
     "static/media/puppy-Mary.png": "/Pawsome-Pet-Care/static/media/puppy-Mary.612361adc051bb63c66a.png",
     "static/media/parallax-home-2.jpg": "/Pawsome-Pet-Care/static/media/parallax-home-2.f90372b2b3158b905841.jpg",
@@ -36,11 +36,11 @@
     "static/media/dog-collar.png": "/Pawsome-Pet-Care/static/media/dog-collar.b45fc7814cb6ad09af51.png",
     "static/media/pawsome-logo.png": "/Pawsome-Pet-Care/static/media/pawsome-logo.f708fe024255aad986b1.png",
     "index.html": "/Pawsome-Pet-Care/index.html",
-    "main.e6e94f81.css.map": "/Pawsome-Pet-Care/static/css/main.e6e94f81.css.map",
+    "main.36459c80.css.map": "/Pawsome-Pet-Care/static/css/main.36459c80.css.map",
     "main.8849368f.js.map": "/Pawsome-Pet-Care/static/js/main.8849368f.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6e94f81.css",
+    "static/css/main.36459c80.css",
     "static/js/main.8849368f.js"
   ]
 }
