@@ -12,7 +12,7 @@ const Adopt = () => {
     useEffect(() => {
         const fetchDogs = async () => {
             try {
-                const response = await axios.get("https://serverside-9phk.onrender.com/api/house_plans");
+                const response = await axios.get("https://serverside-9phk.onrender.com/api/dogs");
                 setDogs(response.data.animals);
             } catch (error) {
                 console.error("Error fetching dogs:", error);
