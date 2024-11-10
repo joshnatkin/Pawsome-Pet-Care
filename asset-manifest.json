@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Pawsome-Pet-Care/static/css/main.c04bd873.css",
-    "main.js": "/Pawsome-Pet-Care/static/js/main.74423edd.js",
+    "main.css": "/Pawsome-Pet-Care/static/css/main.790e1ba1.css",
+    "main.js": "/Pawsome-Pet-Care/static/js/main.869186b8.js",
     "static/media/parallax-home-2.jpg": "/Pawsome-Pet-Care/static/media/parallax-home-2.f90372b2b3158b905841.jpg",
     "static/media/my-face.png": "/Pawsome-Pet-Care/static/media/my-face.f4670940378a6455b147.png",
     "static/media/parallax-home-1.jpg": "/Pawsome-Pet-Care/static/media/parallax-home-1.2d26612341b9817591e6.jpg",
@@ -19,11 +19,11 @@
     "static/media/dog-collar.png": "/Pawsome-Pet-Care/static/media/dog-collar.b45fc7814cb6ad09af51.png",
     "static/media/pawsome-logo.png": "/Pawsome-Pet-Care/static/media/pawsome-logo.f708fe024255aad986b1.png",
     "index.html": "/Pawsome-Pet-Care/index.html",
-    "main.c04bd873.css.map": "/Pawsome-Pet-Care/static/css/main.c04bd873.css.map",
-    "main.74423edd.js.map": "/Pawsome-Pet-Care/static/js/main.74423edd.js.map"
+    "main.790e1ba1.css.map": "/Pawsome-Pet-Care/static/css/main.790e1ba1.css.map",
+    "main.869186b8.js.map": "/Pawsome-Pet-Care/static/js/main.869186b8.js.map"
   },
   "entrypoints": [
-    "static/css/main.c04bd873.css",
-    "static/js/main.74423edd.js"
+    "static/css/main.790e1ba1.css",
+    "static/js/main.869186b8.js"
   ]
 }
