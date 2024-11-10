@@ -12,15 +12,16 @@ const Adopt = () => {
     useEffect(() => {
         const fetchDogs = async () => {
             try {
-                const response = await axios.get("https://joshnatkin.github.io/csce242/projects/part6/information.json");
+                const response = await axios.get("https://serverside-9phk.onrender.com/api/house_plans");
                 setDogs(response.data.animals);
             } catch (error) {
-                console.error(error);
+                console.error("Error fetching dogs:", error);
             }
         };
-
+    
         fetchDogs();
     }, []);
+
 
     const showDetails = (dog) => {
         setSelectedDog(dog);
