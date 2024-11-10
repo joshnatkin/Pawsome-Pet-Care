@@ -10,10 +10,8 @@
     --color-dark-gray: #374151;
     --color-green: #a9f1f4;
     --color-ivory: #FFFFF0;
-    --color-opaque: rgba(128, 128, 128, );
+    --color-opaque: rgba(128, 128, 128, 0.5);
 }
-
-
 
 /* Body styling */
 body {
@@ -30,66 +28,104 @@ body {
     margin-top: 10px;
 }
 
-
 #group {
     background-color: var(--color-white);
     margin-bottom: 10px;
     width: 100%;
     display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items horizontally */
 }
 
-#first-five, #second-five {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-    align-items: center;
-    width: 100%; /* Make the parent section full width */
-}
-
+/* Section styling for individual supply items */
 .supplies {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff; /* Change as needed for your color scheme */
+    background-color: #ffffff;
     border-radius: 8px;
-    width: 500px;
-    margin: 10px; /* Space between supply sections */
+    margin: 10px; /* Space between sections */
     padding: 20px;
-    display: flex; /* Flexbox layout for image alignment */
-    align-items: center; /* Center vertically */
+    display: flex;
+    flex-direction: column; /* Stack text and image vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    width: 100%; /* Allow to scale based on available space */
+    max-width: 320px; /* Maximum width for each section */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .supplies:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
 }
 
-.supplies .text-container {
-    flex: 1; 
-    margin-right: 10px; 
-}
-
-.supplies h3 {
-    font-size: 1.5em; 
-    color: #333; 
-}
-
+/* Image inside each supply section */
 .supplies img {
-    margin-left: 15px;
-    width: 150px; /* Fixed width for images */
-    height: 100px;
+    margin-top: 10px;
+    width: 120px; /* Resize the images */
+    height: 120px;
     object-fit: cover;
-    border-radius: 5px; /* Rounded corners for images */
+    border-radius: 5px; /* Rounded corners */
 }
 
+/* Section heading inside each supply */
+.supplies h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Text inside supply section */
+.supplies .text-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Main image at the top of the page */
 #group1-img {
-    width: 100%; 
+    width: 100%;
     height: 300px;
     object-fit: cover;
-
 }
 
+/* For screens larger than 768px (tablet and desktop) */
 @media only screen and (min-width: 769px) {
-    #nav-items a:hover {
-        border-bottom: 2px solid black; 
-        padding-bottom: 8px;
+    #group {
+        display: flex;
+        justify-content: space-evenly; /* Distribute space evenly between items */
+        flex-wrap: wrap;
+    }
+
+    /* Ensure the image sizes are consistent for larger screens */
+    .supplies img {
+        width: 150px; /* Slightly larger image for bigger screens */
+        height: 150px;
+    }
+
+    /* Adjust title sizes on larger screens */
+    .supplies h3 {
+        font-size: 1.5em;
+    }
+}
+
+/* For smaller screens (below 769px) */
+@media only screen and (max-width: 768px) {
+    /* Stack sections vertically on small screens */
+    #group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .supplies {
+        width: 90%; /* Let sections take up most of the width */
+        max-width: none; /* Remove max-width for better scaling */
+        margin: 10px 0; /* Vertical margin between sections */
+    }
+
+    .supplies img {
+        width: 100px; /* Slightly smaller images for small screens */
+        height: 100px;
+    }
+
+    .supplies h3 {
+        font-size: 1.2em; /* Adjust heading size for small screens */
     }
 }
