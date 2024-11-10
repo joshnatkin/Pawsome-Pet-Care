@@ -1,35 +1,18 @@
 {
   "files": {
     "main.css": "/Pawsome-Pet-Care/static/css/main.c04bd873.css",
-    "main.js": "/Pawsome-Pet-Care/static/js/main.22c507bc.js",
-    "static/media/puppy-Mary.png": "/Pawsome-Pet-Care/static/media/puppy-Mary.612361adc051bb63c66a.png",
+    "main.js": "/Pawsome-Pet-Care/static/js/main.74423edd.js",
     "static/media/parallax-home-2.jpg": "/Pawsome-Pet-Care/static/media/parallax-home-2.f90372b2b3158b905841.jpg",
     "static/media/my-face.png": "/Pawsome-Pet-Care/static/media/my-face.f4670940378a6455b147.png",
     "static/media/parallax-home-1.jpg": "/Pawsome-Pet-Care/static/media/parallax-home-1.2d26612341b9817591e6.jpg",
-    "static/media/Dane-Ruford.png": "/Pawsome-Pet-Care/static/media/Dane-Ruford.bc736d36783d47dd5847.png",
-    "static/media/Cocker-Baxston.png": "/Pawsome-Pet-Care/static/media/Cocker-Baxston.ee4a1f850f003e5a0e4b.png",
-    "static/media/Wheaten-Boxer.jpeg": "/Pawsome-Pet-Care/static/media/Wheaten-Boxer.8d1aafc3b68699d30bcb.jpeg",
-    "static/media/retriever-leah.png": "/Pawsome-Pet-Care/static/media/retriever-leah.92a3a691941f7fcbfba3.png",
-    "static/media/poodle-andy.png": "/Pawsome-Pet-Care/static/media/poodle-andy.dfe36eb11276e3eb0b3f.png",
     "static/media/nine-dogs-in-grassy-field.jpg": "/Pawsome-Pet-Care/static/media/nine-dogs-in-grassy-field.49c4d45f7c59f43441d0.jpg",
-    "static/media/poodle-marcus.png": "/Pawsome-Pet-Care/static/media/poodle-marcus.3360f210697154f0b186.png",
-    "static/media/Ausie-Zoey.jpg": "/Pawsome-Pet-Care/static/media/Ausie-Zoey.54fc09f0c2d2723f0e03.jpg",
     "static/media/search-img.png": "/Pawsome-Pet-Care/static/media/search-img.223394e95e7fe61ee8d1.png",
     "static/media/footer-pic.png": "/Pawsome-Pet-Care/static/media/footer-pic.aba6f8ac7d33f862a5f2.png",
     "static/media/add-friends.png": "/Pawsome-Pet-Care/static/media/add-friends.a55a437b0b0869ea427d.png",
-    "static/media/Shihtzu-arnold.png": "/Pawsome-Pet-Care/static/media/Shihtzu-arnold.7fa9edf1cfb5f4900889.png",
     "static/media/shopping-cart.png": "/Pawsome-Pet-Care/static/media/shopping-cart.f98c22d97509b802a049.png",
     "static/media/dog-food.png": "/Pawsome-Pet-Care/static/media/dog-food.52c7a48ac8e0682b1234.png",
-    "static/media/pit-sparky.png": "/Pawsome-Pet-Care/static/media/pit-sparky.c810b426af4b34e27013.png",
-    "static/media/husky-damian.png": "/Pawsome-Pet-Care/static/media/husky-damian.1ea5bef2901b94450105.png",
-    "static/media/pit-rufus.jpeg": "/Pawsome-Pet-Care/static/media/pit-rufus.f93e376f04e78b49a494.jpeg",
     "static/media/dog-crate.png": "/Pawsome-Pet-Care/static/media/dog-crate.9974f3704a4ed9dd13a6.png",
     "static/media/dog-treats.png": "/Pawsome-Pet-Care/static/media/dog-treats.a94951291b7960718696.png",
-    "static/media/boxer-cassie.png": "/Pawsome-Pet-Care/static/media/boxer-cassie.2039b5575e1f133c1a50.png",
-    "static/media/lab-jodi.png": "/Pawsome-Pet-Care/static/media/lab-jodi.7e2c226a053e75708dae.png",
-    "static/media/dalmation-walter.jpeg": "/Pawsome-Pet-Care/static/media/dalmation-walter.6ed7cab3cf8adec2ab1b.jpeg",
-    "static/media/german-snoopy.png": "/Pawsome-Pet-Care/static/media/german-snoopy.a668c58fc77ae3fc1dbb.png",
-    "static/media/lab-sammy.png": "/Pawsome-Pet-Care/static/media/lab-sammy.a562df84c844b75eedfc.png",
     "static/media/dog-toy.png": "/Pawsome-Pet-Care/static/media/dog-toy.4c4e0339015ab1084a19.png",
     "static/media/grooming-tools.png": "/Pawsome-Pet-Care/static/media/grooming-tools.ecb4c84b725a889fcd74.png",
     "static/media/poop-bag.png": "/Pawsome-Pet-Care/static/media/poop-bag.3a914dd8eefcb4a4812e.png",
@@ -37,10 +20,10 @@
     "static/media/pawsome-logo.png": "/Pawsome-Pet-Care/static/media/pawsome-logo.f708fe024255aad986b1.png",
     "index.html": "/Pawsome-Pet-Care/index.html",
     "main.c04bd873.css.map": "/Pawsome-Pet-Care/static/css/main.c04bd873.css.map",
-    "main.22c507bc.js.map": "/Pawsome-Pet-Care/static/js/main.22c507bc.js.map"
+    "main.74423edd.js.map": "/Pawsome-Pet-Care/static/js/main.74423edd.js.map"
   },
   "entrypoints": [
     "static/css/main.c04bd873.css",
-    "static/js/main.22c507bc.js"
+    "static/js/main.74423edd.js"
   ]
 }
