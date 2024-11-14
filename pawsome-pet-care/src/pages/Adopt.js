@@ -4,6 +4,7 @@ import DogDetails from "../components/DogAdopt";
 import Dog from "../components/Dogs";
 import AddDog from "../components/AddDog"; // Import AddDog component
 import "../css/Adopt.css";
+import "../css/AddDog.css";
 
 const Adopt = () => {
     const [dogs, setDogs] = useState([]);

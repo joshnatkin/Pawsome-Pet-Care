@@ -1,0 +1,134 @@
+:root {
+    --color-overlay: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+    --color-background: white;
+    --color-primary: dodgerblue;
+    --color-primary-dark: darkblue;
+    --color-text: black;
+    --color-text-muted: #555;
+    --color-border: lightgray;
+  }
+  
+  /* Modal Overlay */
+  #add-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-overlay);
+    z-index: 1000;
+  }
+  
+  /* Modal Content */
+  #add-dialog .modal-content {
+    background-color: var(--color-background);
+    border-radius: 10px;
+    max-width: 600px;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 50px 40px;
+  }
+  
+  /* Close Button */
+  #add-dialog .dialog-close {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-text);
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+  }
+  
+  /* Form Container */
+  #add-dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Form Row with Label and Input Aligned Horizontally */
+  #add-dialog .form-row {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 1rem;
+  }
+
+  .button-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* Labels Positioned Left of Inputs */
+  #add-dialog label {
+    font-weight: 500;
+    margin-right: 1rem;
+    width: 25%; /* Adjust this to control the width of the label */
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  /* Input Fields */
+  #add-dialog input[type="text"],
+  #add-dialog input[type="file"],
+  #add-dialog select {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  #add-dialog input[type="text"]:focus,
+  #add-dialog select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+  }
+  
+  /* Submit Button */
+  #add-dialog button[type="submit"] {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    border: none;
+    padding: 8px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    width: 50%;
+  }
+  
+  #add-dialog button[type="submit"]:hover {
+    background-color: var(--color-primary-dark);
+  }
+  
+  /* Centered Result Message */
+  #add-dialog .result-message {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    text-align: center;
+  }
+  
+  /* Image Preview Section */
+  #add-dialog #img-prev-section {
+    text-align: center;
+  }
+  
+  #add-dialog #img-prev {
+    max-width: 100%;
+    max-height: 150px;
+    margin-top: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+  }
+  
