@@ -10,10 +10,8 @@
     --color-dark-gray: #374151;
     --color-green: #a9f1f4;
     --color-ivory: #FFFFF0;
-    --color-opaque: rgba(128, 128, 128, );
+    --color-opaque: rgba(128, 128, 128, 0.5);
 }
-
-
 
 /* Body styling */
 body {
@@ -56,7 +54,6 @@ body {
     padding: 20px;
 }
 
-
 #dog-search, #sort-options {
     width: 80%;
     padding: 8px;
@@ -67,21 +64,27 @@ body {
 }
 
 #adopt-filters button {
-    background-color: var(--color-blue);
+    background-color: var(--color-dark-blue);
     color: var(--color-white);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#dog-search input{
+#adopt-filters button:hover {
+    background-color: var(--color-light-blue);
+}
+
+#dog-search input {
     width: 200px;
     padding: 10px;
 }
+
 #animals {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     width: 90%;
@@ -91,16 +94,22 @@ body {
     background-color: var(--color-white);
 }
 
-.dog-container { 
-    width: 200px; 
-    height: auto; 
+.dog-container {
+    width: 200px;
+    height: auto;
     padding: 10px;
-    margin: 20px 20px; 
+    margin: 20px 20px;
     background-color: var(--color-light-grayish-blue);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.dog-container:hover {
+    transform: scale(1.05);
 }
 
 .dog-h4 {
@@ -110,27 +119,26 @@ body {
 
 .dog-p {
     font-size: 1rem;
-    margin: 2px 0; /* Minimal space between paragraphs */
+    margin: 2px 0;
 }
 
 .dog-img {
-    width: 100%; 
-    height: 200px; 
+    width: 100%;
+    height: 200px;
     margin-bottom: 10px;
     border-radius: 4px;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
-/*dog-expanded section*/
-
+/* Dog expanded section (Popup) */
 #dog-expanded-section {
     position: fixed;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 500px;
-    height: auto; /* Set height to auto for content fit */
-    max-height: 80%; /* Max height to avoid overflow */
+    height: auto;
+    max-height: 80%;
     background-color: var(--color-light-grayish-blue);
     color: black;
     padding: 20px;
@@ -139,8 +147,8 @@ body {
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for popup effect */
-    overflow-y: auto; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
 }
 
 #dog-expanded-section img {
@@ -159,19 +167,57 @@ body {
     color: black;
 }
 
-
-#adopt-search {
-    margin-top: 10%;
+/* Add Dog Modal */
+#add-dog-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999; /* Make sure it appears above other elements */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 }
 
-
-#google{
-    margin-top: 5%;
+#add-dog-modal form {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
-#google-maps{
-    width: 70%;
+#add-dog-modal input, #add-dog-modal select {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid var(--color-gray);
+    font-size: 1rem;
+}
+
+#add-dog-modal button {
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#add-dog-modal button:hover {
+    background-color: var(--color-light-blue);
+}
+
+/* Add Dog Modal Close Button */
+#add-dog-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: var(--color-black);
+    cursor: pointer;
 }

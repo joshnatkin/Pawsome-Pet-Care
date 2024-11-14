@@ -1,27 +1,27 @@
-// Adopt.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import DogDetails from "../components/DogAdopt"; // Adjust the path as necessary
-import Dog from "../components/Dogs"; // Adjust the path as necessary
+import DogDetails from "../components/DogAdopt";
+import Dog from "../components/Dogs";
+import AddDog from "../components/AddDog"; // Import AddDog component
 import "../css/Adopt.css";
 
 const Adopt = () => {
     const [dogs, setDogs] = useState([]);
     const [selectedDog, setSelectedDog] = useState(null);
+    const [showAddDog, setShowAddDog] = useState(false); // State for AddDog modal
 
     useEffect(() => {
-        const fetchDogs = async () => {
-            try {
-                const response = await axios.get("https://serverside-9phk.onrender.com/api/dogs");
-                setDogs(response.data.animals);
-            } catch (error) {
-                console.error("Error fetching dogs:", error);
-            }
-        };
-    
         fetchDogs();
     }, []);
 
+    const fetchDogs = async () => {
+        try {
+            const response = await axios.get("https://serverside-9phk.onrender.com/api/dogs");
+            setDogs(response.data.animals);
+        } catch (error) {
+            console.error("Error fetching dogs:", error);
+        }
+    };
 
     const showDetails = (dog) => {
         setSelectedDog(dog);
@@ -29,6 +29,15 @@ const Adopt = () => {
 
     const closeDetails = () => {
         setSelectedDog(null);
+    };
+
+    const openAddDogModal = () => {
+        setShowAddDog(true);
+    };
+
+    const closeAddDogModal = () => {
+        setShowAddDog(false);
+        fetchDogs(); // Refresh the dog list after adding a new dog
     };
 
     return (
@@ -44,13 +53,16 @@ const Adopt = () => {
                         <p>Sort by</p>
                         <label htmlFor="sort-options"></label>
                         <select id="sort-options">
-                            <option value="" selected></option>
+                            <option value=""></option>
                             <option value="age">Age</option>
                             <option value="Low">Price: Low to High</option>
                             <option value="High">Price: High to Low</option>
                         </select>
                     </section>
+                    {/* Add Dog button */}
+                    <button id="add-dog-button" onClick={openAddDogModal}>Add Dog +</button>
                 </div>
+
                 <div id="animals">
                     {dogs.map(dog => (
                         <Dog key={dog.id} dog={dog} onClick={() => showDetails(dog)} />
@@ -81,6 +93,11 @@ const Adopt = () => {
                 }}>
                     <DogDetails dog={selectedDog} onClose={closeDetails} />
                 </div>
+            )}
+
+            {/* Render AddDog modal conditionally */}
+            {showAddDog && (
+                <AddDog closeDialog={closeAddDogModal} />
             )}
         </div>
     );
