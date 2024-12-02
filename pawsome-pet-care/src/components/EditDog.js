@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../css/AddDog.css";
 
 const EditDog = (props) => {
   const [inputs, setInputs] = useState({
@@ -59,9 +60,8 @@ const EditDog = (props) => {
   };
 
   return (
-    <div id="edit-dialog" className="w3-modal">
-      <div className="w3-modal-content">
-        <div className="w3-container">
+    <div id="add-dialog" className="modal">
+      <div className="modal-content">
           <span
             id="dialog-close"
             className="w3-button w3-display-topright"
@@ -69,8 +69,8 @@ const EditDog = (props) => {
           >
             &times;
           </span>
-          <form onSubmit={handleSubmit}>
-            <p>
+          <form id="add-dog-form" onSubmit={handleSubmit}>
+            <div className="form-row">
               <label htmlFor="name">Name:</label>
               <input
                 type="text"
@@ -80,8 +80,8 @@ const EditDog = (props) => {
                 onChange={handleChange}
                 required
               />
-            </p>
-            <p>
+            </div>
+            <div className="form-row">
               <label htmlFor="breed">Breed:</label>
               <input
                 type="text"
@@ -91,8 +91,8 @@ const EditDog = (props) => {
                 onChange={handleChange}
                 required
               />
-            </p>
-            <p>
+            </div>
+            <div className="form-row">
               <label htmlFor="age">Age:</label>
               <input
                 type="text"
@@ -102,8 +102,21 @@ const EditDog = (props) => {
                 onChange={handleChange}
                 required
               />
-            </p>
-            <p>
+            </div>
+            <div className="form-row">
+              <label htmlFor="gender">Gender:</label>
+              <select
+                id="gender"
+                name="gender"
+                value={inputs.gender}
+                onChange={handleChange}
+              >
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+            <div className="form-row">
               <label htmlFor="features">Features:</label>
               <input
                 type="text"
@@ -113,8 +126,8 @@ const EditDog = (props) => {
                 onChange={handleChange}
                 required
               />
-            </p>
-            <p>
+            </div>
+            <div className="form-row">
               <label htmlFor="vaccinated">Vaccinated:</label>
               <select
                 id="vaccinated"
@@ -125,20 +138,8 @@ const EditDog = (props) => {
                 <option value="true">Yes</option>
                 <option value="false">No</option>
               </select>
-            </p>
-            <p>
-              <label htmlFor="gender">Gender:</label>
-              <select
-                id="gender"
-                name="gender"
-                value={inputs.gender}
-                onChange={handleChange}
-              >
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-              </select>
-            </p>
-            <p>
+            </div>
+            <div className="form-row">
               <label htmlFor="img">Upload New Image:</label>
               <input
                 type="file"
@@ -147,15 +148,14 @@ const EditDog = (props) => {
                 onChange={handleImageChange}
                 accept="image/*"
               />
-            </p>
-            <p>
+            </div>
+            <div className="button-row">
               <button type="submit">Update Dog</button>
-            </p>
+            </div>
             <p>{result}</p>
           </form>
         </div>
       </div>
-    </div>
   );
 };
 

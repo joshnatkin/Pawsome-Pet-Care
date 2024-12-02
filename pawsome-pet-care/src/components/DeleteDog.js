@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../css/Delete.css";
 
 const DeleteDog = ({ _id, name, closeDialog, refreshDogs }) => {
   const [result, setResult] = useState("");
@@ -18,9 +19,8 @@ const DeleteDog = ({ _id, name, closeDialog, refreshDogs }) => {
   };
 
   return (
-    <div id="delete-dialog" className="w3-modal">
-      <div className="w3-modal-content">
-        <div className="w3-container">
+    <div id="delete-dialog" className="modal">
+      <div className="delete-modal">
           <span
             id="dialog-close"
             className="w3-button w3-display-topright"
@@ -38,7 +38,6 @@ const DeleteDog = ({ _id, name, closeDialog, refreshDogs }) => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
