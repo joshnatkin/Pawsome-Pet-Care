@@ -3,6 +3,7 @@ import axios from "axios";
 import DogDetails from "../components/DogAdopt";
 import Dog from "../components/Dogs";
 import AddDog from "../components/AddDog";
+import EditDog from "../components/EditDog"; // Import EditDog component
 import DeleteDog from "../components/DeleteDog"; // Import DeleteDog component
 import "../css/Adopt.css";
 import "../css/AddDog.css";
@@ -11,6 +12,8 @@ const Adopt = () => {
   const [dogs, setDogs] = useState([]);
   const [selectedDog, setSelectedDog] = useState(null);
   const [showAddDog, setShowAddDog] = useState(false);
+  const [showEditDog, setShowEditDog] = useState(false); // State for edit dog modal
+  const [dogToEdit, setDogToEdit] = useState(null); // Store the dog to edit
   const [showDeleteDog, setShowDeleteDog] = useState(false); // State for delete dog modal
   const [dogToDelete, setDogToDelete] = useState(null); // Store the dog to delete
 
@@ -42,6 +45,17 @@ const Adopt = () => {
   const closeAddDogModal = () => {
     setShowAddDog(false);
     fetchDogs(); // Refresh the dog list after adding a new dog
+  };
+
+  const openEditDogModal = (dog) => {
+    setDogToEdit(dog);
+    setShowEditDog(true);
+  };
+
+  const closeEditDogModal = () => {
+    setShowEditDog(false);
+    setDogToEdit(null); // Clear the dog to edit
+    fetchDogs(); // Refresh the dog list after editing a dog
   };
 
   const openDeleteDogModal = (dog) => {
@@ -83,8 +97,9 @@ const Adopt = () => {
             <Dog
               key={dog._id}
               dog={dog}
-              onClick={() => showDetails(dog)}
-              onDelete={() => openDeleteDogModal(dog)} // Add delete action
+              onClick={() => showDetails(dog)} // Show details modal
+              onDelete={() => openDeleteDogModal(dog)} // Open delete modal
+              onEdit={() => openEditDogModal(dog)} // Open edit modal
             />
           ))}
         </div>
@@ -118,7 +133,18 @@ const Adopt = () => {
 
       {showAddDog && <AddDog closeDialog={closeAddDogModal} />}
 
-      {/* Render DeleteDog modal */}
+      {showEditDog && (
+        <EditDog
+          {...dogToEdit} // Pass selected dog's details to the EditDog component
+          closeDialog={closeEditDogModal}
+          updateDog={(updatedDog) =>
+            setDogs((prevDogs) =>
+              prevDogs.map((dog) => (dog._id === updatedDog._id ? updatedDog : dog))
+            )
+          }
+        />
+      )}
+
       {showDeleteDog && (
         <DeleteDog
           _id={dogToDelete._id}
