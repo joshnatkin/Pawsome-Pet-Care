@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Pawsome-Pet-Care/static/css/main.661f062e.css",
-    "main.js": "/Pawsome-Pet-Care/static/js/main.44182b1b.js",
+    "main.js": "/Pawsome-Pet-Care/static/js/main.f5cdab6a.js",
     "static/media/parallax-home-2.jpg": "/Pawsome-Pet-Care/static/media/parallax-home-2.f90372b2b3158b905841.jpg",
     "static/media/my-face.png": "/Pawsome-Pet-Care/static/media/my-face.f4670940378a6455b147.png",
     "static/media/parallax-home-1.jpg": "/Pawsome-Pet-Care/static/media/parallax-home-1.2d26612341b9817591e6.jpg",
@@ -20,10 +20,10 @@
     "static/media/pawsome-logo.png": "/Pawsome-Pet-Care/static/media/pawsome-logo.f708fe024255aad986b1.png",
     "index.html": "/Pawsome-Pet-Care/index.html",
     "main.661f062e.css.map": "/Pawsome-Pet-Care/static/css/main.661f062e.css.map",
-    "main.44182b1b.js.map": "/Pawsome-Pet-Care/static/js/main.44182b1b.js.map"
+    "main.f5cdab6a.js.map": "/Pawsome-Pet-Care/static/js/main.f5cdab6a.js.map"
   },
   "entrypoints": [
     "static/css/main.661f062e.css",
-    "static/js/main.44182b1b.js"
+    "static/js/main.f5cdab6a.js"
   ]
 }
