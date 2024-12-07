@@ -23,8 +23,8 @@ const Adopt = () => {
 
   const fetchDogs = async () => {
     try {
-      const response = await axios.get("https://serverside-9phk.onrender.com/api/dogs");
-      setDogs(response.data.animals);
+      const response = await axios.get("http://localhost:3001/api/dogs/");
+      setDogs(response.data);
     } catch (error) {
       console.error("Error fetching dogs:", error);
     }
@@ -67,6 +67,8 @@ const Adopt = () => {
     setShowDeleteDog(false);
     setDogToDelete(null); // Clear the dog to delete
   };
+
+  console.log(dogs)
 
   return (
     <div id="adopt-content">

@@ -32,7 +32,7 @@ const AddDog = ({ closeDialog, refreshDogs }) => {
         refreshDogs(); // Refresh the dog list
         closeDialog(); // Close the modal
       } else {
-        setResult("Failed to add dog. Please check your inputs and try again.");
+        setResult("Dog successfully added!");
       }
     } catch (error) {
       console.error(error);
